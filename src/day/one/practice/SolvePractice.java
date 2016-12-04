@@ -1,4 +1,4 @@
-package one.practice;
+package day.one.practice;
 
 public class SolvePractice {
 	
@@ -16,6 +16,8 @@ public class SolvePractice {
 			
 			url = true;
 		} 
+		
+		System.out.println(text);
 		
 		
 		return url;
