@@ -32,7 +32,7 @@ public class MethodTwo {
 	}
 	
 	/**
-	 * Write a method that take one number input and return the list of all even
+	 * Write a method that take one number input and return the list of all odd
 	 * number from 0 to that given number.
 	 */
 	
