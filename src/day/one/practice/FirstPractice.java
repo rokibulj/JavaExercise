@@ -1,6 +1,6 @@
 package day.one.practice;
 
-public class SolvePractice {
+public class FirstPractice {
 	
 	public static void main(String[] args){
 		
