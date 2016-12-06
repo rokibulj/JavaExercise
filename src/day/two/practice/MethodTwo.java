@@ -14,6 +14,21 @@ public class MethodTwo {
 
 		System.out.println(getSameText("This is a String"));
 
+		System.out.println(getLowerText("HOW ARE YOU?"));
+
+	}
+
+	/**
+	 * Write a method that take one String input and return same String in
+	 * lowerCase.
+	 */
+
+	public static String getLowerText(String text) {
+		String lowerText = "";
+
+		lowerText = text.toLowerCase();
+
+		return lowerText;
 	}
 
 	/**
