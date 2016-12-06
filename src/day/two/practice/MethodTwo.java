@@ -9,7 +9,21 @@ public class MethodTwo {
 		System.out.println(getEvenList(21));
 		
 		System.out.println(getOddList(18));
+		
+		System.out.println(getKilo(10));
 
+	}
+	
+	/**
+	 * Write a method that take input as mile and return as kilometer.
+	 */
+	
+	public static double getKilo(int number){
+		double kilo = 0;
+		
+		kilo = number*1.6;
+		
+		return kilo;
 	}
 
 	/**
