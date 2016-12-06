@@ -7,22 +7,37 @@ public class MethodTwo {
 	public static void main(String[] args) {
 
 		System.out.println(getEvenList(21));
-		
+
 		System.out.println(getOddList(18));
-		
+
 		System.out.println(getKilo(10));
 
+		System.out.println(getSameText("This is a String"));
+
 	}
-	
+
+	/**
+	 * Write a method that take one String input and return same String in
+	 * upperCase.
+	 */
+
+	public static String getSameText(String text) {
+		String sameText = "";
+
+		sameText = text.toUpperCase();
+
+		return sameText;
+	}
+
 	/**
 	 * Write a method that take input as mile and return as kilometer.
 	 */
-	
-	public static double getKilo(int number){
+
+	public static double getKilo(int number) {
 		double kilo = 0;
-		
-		kilo = number*1.6;
-		
+
+		kilo = number * 1.6;
+
 		return kilo;
 	}
 
@@ -44,12 +59,12 @@ public class MethodTwo {
 
 		return evenList;
 	}
-	
+
 	/**
 	 * Write a method that take one number input and return the list of all odd
 	 * number from 0 to that given number.
 	 */
-	
+
 	public static ArrayList<Integer> getOddList(int number) {
 		ArrayList<Integer> oddList = new ArrayList<Integer>();
 
