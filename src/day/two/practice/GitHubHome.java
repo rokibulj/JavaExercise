@@ -18,7 +18,25 @@ public class GitHubHome {
 
 		String text = "Selenium practice at home";
 		System.out.println(getIndexList(text));
+		
+		System.out.println(getCharactersList(text));
 
+	}
+	
+	/**
+	 * Mhd # 08. Write a method that take one String input and return a list of
+	 * all characters. 
+	 */
+	
+	public static ArrayList<Character> getCharactersList(String text){
+		ArrayList<Character> charactersList = new ArrayList<Character>();
+		
+		for(int i = 0; i < text.length(); i++){
+			
+			charactersList.add(text.charAt(i));
+		}
+		
+		return charactersList;
 	}
 
 	/**
