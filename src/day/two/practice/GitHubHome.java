@@ -2,7 +2,7 @@ package day.two.practice;
 
 import java.util.ArrayList;
 
-public class MethodTwo {
+public class GitHubHome {
 
 	public static void main(String[] args) {
 
@@ -16,6 +16,24 @@ public class MethodTwo {
 
 		System.out.println(getLowerText("HOW ARE YOU?"));
 
+		String text = "Selenium practice at home";
+		System.out.println(getIndexList(text));
+
+	}
+
+	/**
+	 * Write a method that take one String input and return a list of all index.
+	 */
+
+	public static ArrayList<Integer> getIndexList(String text) {
+		ArrayList<Integer> indexList = new ArrayList<Integer>();
+
+		for (int i = 0; i < text.length(); i++) {
+
+			indexList.add(i);
+		}
+
+		return indexList;
 	}
 
 	/**
