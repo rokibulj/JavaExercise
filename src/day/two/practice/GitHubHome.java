@@ -18,42 +18,75 @@ public class GitHubHome {
 
 		String text = "Selenium practice at home";
 		System.out.println(getIndexList(text));
-		
+
 		System.out.println(getCharactersList(text));
-		
+
 		System.out.println(getSum(20));
 
+		System.out.println(getSquare(20));
+
+		System.out.println(getArray(13));
+
 	}
-	
+
+	/**
+	 * Mhd # 11. Write a method that take one number input and return an Array
+	 * that contains 0 to given number.
+	 */
+
+	public static int[] getArray(int number) {
+		int[] newArray = new int[number + 1];
+
+		for (int i = 0; i <= number; i++) {
+
+			newArray[i] = i;
+		}
+
+		return newArray;
+	}
+
+	/**
+	 * Mhd # 10. Write a method that take one number input and return square of
+	 * the given number.
+	 */
+
+	public static int getSquare(int number) {
+		int square = 0;
+
+		square = number * number;
+
+		return square;
+	}
+
 	/**
 	 * Mhd # 09. Write a method that take one number input & return the sum of 1
 	 * to that given number.
 	 */
-	
-	public static int getSum(int number){
+
+	public static int getSum(int number) {
 		int sum = 0;
-		
-		for(int i = 1; i <= number; i++){
-			
+
+		for (int i = 1; i <= number; i++) {
+
 			sum = sum + i;
 		}
-		
+
 		return sum;
 	}
-	
+
 	/**
 	 * Mhd # 08. Write a method that take one String input and return a list of
-	 * all characters. 
+	 * all characters.
 	 */
-	
-	public static ArrayList<Character> getCharactersList(String text){
+
+	public static ArrayList<Character> getCharactersList(String text) {
 		ArrayList<Character> charactersList = new ArrayList<Character>();
-		
-		for(int i = 0; i < text.length(); i++){
-			
+
+		for (int i = 0; i < text.length(); i++) {
+
 			charactersList.add(text.charAt(i));
 		}
-		
+
 		return charactersList;
 	}
 
