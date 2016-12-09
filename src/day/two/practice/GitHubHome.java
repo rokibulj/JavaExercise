@@ -20,7 +20,25 @@ public class GitHubHome {
 		System.out.println(getIndexList(text));
 		
 		System.out.println(getCharactersList(text));
+		
+		System.out.println(getSum(20));
 
+	}
+	
+	/**
+	 * Mhd # 09. Write a method that take one number input & return the sum of 1
+	 * to that given number.
+	 */
+	
+	public static int getSum(int number){
+		int sum = 0;
+		
+		for(int i = 1; i <= number; i++){
+			
+			sum = sum + i;
+		}
+		
+		return sum;
 	}
 	
 	/**
