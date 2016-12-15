@@ -30,6 +30,28 @@ public class GitHubHome {
 
 		System.out.println("Ans#12. " + getGivenNumberList(20));
 
+		System.out.println("Ans#13. " + getStatementReturn(25));
+
+	}
+
+	/**
+	 * Mhd # 13. Write a method that take one number input and return fizz if
+	 * the given number divided by 5 and return buzz if the given number divided
+	 * by 5 & 3. Otherwise return fizz buzz. Input/Parameter : int number.
+	 * Output/Return type : String Serving Bucket : Variable.
+	 */
+
+	public static String getStatementReturn(int number) {
+		String statement = null;
+		if (number % 5 == 0 && number % 3 == 0) {
+			statement = "buzz";
+		} else if (number % 5 == 0) {
+			statement = "fizz";
+		} else {
+			statement = "fizz buzz";
+		}
+
+		return statement;
 	}
 
 	/**
