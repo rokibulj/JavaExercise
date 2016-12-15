@@ -28,6 +28,23 @@ public class GitHubHome {
 
 		System.out.println(Arrays.toString(getArray(13)));
 
+		System.out.println("Ans#12. " + getGivenNumberList(20));
+
+	}
+
+	/**
+	 * Mhd # 12. Write a method that take one number input and return a number
+	 * List starting from 0 to that given number. Input/Parameter : int number.
+	 * Output/Return type : ArrayList<Integer> Serving Bucket : List.
+	 */
+
+	public static ArrayList<Integer> getGivenNumberList(int number) {
+		ArrayList<Integer> givenNumberList = new ArrayList<Integer>();
+		for (int i = 0; i <= number; i++) {
+			givenNumberList.add(i);
+		}
+
+		return givenNumberList;
 	}
 
 	/**
