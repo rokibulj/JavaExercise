@@ -35,6 +35,25 @@ public class GitHubHome {
 		int[] numberArray = { 1, 4, 9, 8, 3 };
 		System.out.println("Ans#14. " + getMaxNumber(numberArray));
 
+		System.out.println(("Ans#15. " + getMinNumber(numberArray)));
+
+	}
+
+	/**
+	 * Mhd # 15. Write a method that take input one number Array and return the
+	 * minimum number. Input/Parameter :int[] numberArray. Output/Return type :
+	 * Integer Serving Bucket : Variable.
+	 */
+
+	public static int getMinNumber(int[] numberArray) {
+		int minNumber = numberArray[0];
+		for (int i = 0; i < numberArray.length; i++) {
+			if (minNumber > numberArray[i]) {
+				minNumber = numberArray[i];
+			}
+		}
+
+		return minNumber;
 	}
 
 	/**
@@ -44,13 +63,13 @@ public class GitHubHome {
 	 */
 
 	public static int getMaxNumber(int[] numberArray) {
-		int maxNumber = 0;
+		int maxNumber = numberArray[0];
 		for (int i = 0; i < numberArray.length; i++) {
 			if (maxNumber < numberArray[i]) {
 				maxNumber = numberArray[i];
 			}
 		}
-		
+
 		return maxNumber;
 	}
 
