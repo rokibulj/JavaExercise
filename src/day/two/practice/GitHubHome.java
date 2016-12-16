@@ -32,6 +32,26 @@ public class GitHubHome {
 
 		System.out.println("Ans#13. " + getStatementReturn(25));
 
+		int[] numberArray = { 1, 4, 9, 8, 3 };
+		System.out.println("Ans#14. " + getMaxNumber(numberArray));
+
+	}
+
+	/**
+	 * Mhd # 14. Write a method that take input one number Array and return the
+	 * maximum number. Input/Parameter :int[] numberArray. Output/Return type :
+	 * Integer Serving Bucket : Variable.
+	 */
+
+	public static int getMaxNumber(int[] numberArray) {
+		int maxNumber = 0;
+		for (int i = 0; i < numberArray.length; i++) {
+			if (maxNumber < numberArray[i]) {
+				maxNumber = numberArray[i];
+			}
+		}
+		
+		return maxNumber;
 	}
 
 	/**
