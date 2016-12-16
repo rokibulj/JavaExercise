@@ -38,7 +38,23 @@ public class GitHubHome {
 		System.out.println(("Ans#15. " + getMinNumber(numberArray)));
 
 		System.out.println("Ans#16. " + getString(16));
+		
+		System.out.println("Ans#17. " + getInteger("34"));
 
+	}
+	
+	/**
+	 * Mhd # 17. Write a method that take input a String which representation a
+	 * number and return the same value as Integer. Input/Parameter :String
+	 * number. Output/Return type : Integer Serving Bucket : Variable
+	 */
+	
+	public static int getInteger(String number){
+		int asInt = 0;
+		asInt = Integer.valueOf(number);
+		//System.out.println(asInt + asInt);
+		
+		return asInt;
 	}
 
 	/**
