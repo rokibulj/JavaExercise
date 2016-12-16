@@ -37,6 +37,21 @@ public class GitHubHome {
 
 		System.out.println(("Ans#15. " + getMinNumber(numberArray)));
 
+		System.out.println("Ans#16. " + getString(16));
+
+	}
+
+	/**
+	 * Mhd # 16. Write a method that take one number input and return the same
+	 * value as string. Input/Parameter : int number. Output/Return type :
+	 * string Serving Bucket : Variable
+	 */
+
+	public static String getString(int number) {
+		String asString = null;
+		asString = String.valueOf(number);
+
+		return asString;
 	}
 
 	/**
