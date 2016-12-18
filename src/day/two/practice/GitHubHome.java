@@ -7,53 +7,39 @@ public class GitHubHome {
 
 	public static void main(String[] args) {
 
-		System.out.println(getEvenList(21));
-
-		System.out.println(getOddList(18));
-
-		System.out.println(getKilo(10));
-
-		System.out.println(getSameText("This is a String"));
-
-		System.out.println(getLowerText("HOW ARE YOU?"));
+		System.out.println("Ans#02. " + getEvenList(21));
+		System.out.println("Ans#03. " + getOddList(18));
+		System.out.println("Ans#04. " + getKilo(10));
+		System.out.println("Ans#05. " + getSameText("This is a String"));
+		System.out.println("Ans#06. " + getLowerText("HOW ARE YOU?"));
 
 		String text = "Selenium practice at home";
-		System.out.println(getIndexList(text));
-
-		System.out.println(getCharactersList(text));
-
-		System.out.println(getSum(20));
-
-		System.out.println(getSquare(20));
-
-		System.out.println(Arrays.toString(getArray(13)));
-
+		System.out.println("Ans#07. " + getIndexList(text));
+		System.out.println("Ans#08. " + getCharactersList(text));
+		System.out.println("Ans#09. " + getSum(20));
+		System.out.println("Ans#10. " + getSquare(20));
+		System.out.println("Ans#11. " + Arrays.toString(getArray(13)));
 		System.out.println("Ans#12. " + getGivenNumberList(20));
-
 		System.out.println("Ans#13. " + getStatementReturn(25));
 
 		int[] numberArray = { 1, 4, 9, 8, 3 };
 		System.out.println("Ans#14. " + getMaxNumber(numberArray));
-
 		System.out.println(("Ans#15. " + getMinNumber(numberArray)));
-
 		System.out.println("Ans#16. " + getString(16));
-		
 		System.out.println("Ans#17. " + getInteger("34"));
 
 	}
-	
+
 	/**
 	 * Mhd # 17. Write a method that take input a String which representation a
 	 * number and return the same value as Integer. Input/Parameter :String
 	 * number. Output/Return type : Integer Serving Bucket : Variable
 	 */
-	
-	public static int getInteger(String number){
+
+	public static int getInteger(String number) {
 		int asInt = 0;
 		asInt = Integer.valueOf(number);
-		//System.out.println(asInt + asInt);
-		
+		// System.out.println(asInt + asInt);
 		return asInt;
 	}
 
@@ -66,7 +52,6 @@ public class GitHubHome {
 	public static String getString(int number) {
 		String asString = null;
 		asString = String.valueOf(number);
-
 		return asString;
 	}
 
@@ -189,7 +174,8 @@ public class GitHubHome {
 	}
 
 	/**
-	 * Write a method that take one String input and return a list of all index.
+	 * Mhd#07. Write a method that take one String input and return a list of
+	 * all index.
 	 */
 	public static ArrayList<Integer> getIndexList(String text) {
 		ArrayList<Integer> indexList = new ArrayList<Integer>();
@@ -201,8 +187,8 @@ public class GitHubHome {
 	}
 
 	/**
-	 * Write a method that take one String input and return same String in
-	 * lowerCase.
+	 * Mhd#06. Write a method that take one String input and return same String
+	 * in lowerCase.
 	 */
 	public static String getLowerText(String text) {
 		String lowerText = "";
@@ -211,8 +197,8 @@ public class GitHubHome {
 	}
 
 	/**
-	 * Write a method that take one String input and return same String in
-	 * upperCase.
+	 * Mhd#05. Write a method that take one String input and return same String
+	 * in upperCase.
 	 */
 	public static String getSameText(String text) {
 		String sameText = "";
@@ -221,7 +207,7 @@ public class GitHubHome {
 	}
 
 	/**
-	 * Write a method that take input as mile and return as kilometer.
+	 * Mhd#04. Write a method that take input as mile and return as kilometer.
 	 */
 	public static double getKilo(int number) {
 		double kilo = 0;
@@ -230,8 +216,8 @@ public class GitHubHome {
 	}
 
 	/**
-	 * Write a method that take one number input and return the list of all even
-	 * number from 0 to that given number.
+	 * Mhd#02. Write a method that take one number input and return the list of
+	 * all even number from 0 to that given number.
 	 */
 	public static ArrayList<Integer> getEvenList(int number) {
 		ArrayList<Integer> evenList = new ArrayList<Integer>();
@@ -245,8 +231,8 @@ public class GitHubHome {
 	}
 
 	/**
-	 * Write a method that take one number input and return the list of all odd
-	 * number from 0 to that given number.
+	 * Mhd#03. Write a method that take one number input and return the list of
+	 * all odd number from 0 to that given number.
 	 */
 	public static ArrayList<Integer> getOddList(int number) {
 		ArrayList<Integer> oddList = new ArrayList<Integer>();
