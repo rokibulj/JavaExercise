@@ -27,7 +27,25 @@ public class GitHubHome {
 		System.out.println(("Ans#15. " + getMinNumber(numberArray)));
 		System.out.println("Ans#16. " + getString(16));
 		System.out.println("Ans#17. " + getInteger("34"));
+		System.out.println("Ans#18. " + getStatement(text));
 
+	}
+
+	/**
+	 * Mhd # 18. Write a method that take String input & return true if it
+	 * contains char 'a'. Otherwise return false; Input/Parameter : Sting text.
+	 * Output/Return type : boolean. Serving Bucket : Variable
+	 */
+
+	public static boolean getStatement(String text) {
+		boolean statement = false;
+		text = text.toLowerCase();
+		for (int i = 0; i < text.length(); i++) {
+			if (text.charAt(i) == 'a') {
+				statement = true;
+			}
+		}
+		return statement;
 	}
 
 	/**
