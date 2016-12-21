@@ -28,7 +28,23 @@ public class GitHubHome {
 		System.out.println("Ans#16. " + getString(16));
 		System.out.println("Ans#17. " + getInteger("34"));
 		System.out.println("Ans#18. " + getStatement(text));
+		System.out.println("Ans#19. " + getIndexSum(text));
 
+	}
+
+	/**
+	 * Mhd # 19. Write a method that take one String input and return the sum of
+	 * all index. Input/Parameter : String text. Output/Return type : Integer.
+	 * Serving Bucket : Variable.
+	 */
+
+	public static int getIndexSum(String text) {
+		int indexSum = 0;
+		for (int i = 0; i < text.length(); i++) {
+			indexSum = indexSum + i;
+		}
+
+		return indexSum;
 	}
 
 	/**
