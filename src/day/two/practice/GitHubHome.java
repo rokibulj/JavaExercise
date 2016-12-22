@@ -29,7 +29,23 @@ public class GitHubHome {
 		System.out.println("Ans#17. " + getInteger("34"));
 		System.out.println("Ans#18. " + getStatement(text));
 		System.out.println("Ans#19. " + getIndexSum(text));
+		System.out.println("Ans#20. " + getLastFiveCharList(text));
 
+	}
+
+	/**
+	 * Mhd # 20. Write a method that take one String input and return a List of
+	 * last five characters. Input/Parameter :String text. Output/Return type
+	 * :ArrayList<Character> Serving Bucket : List
+	 */
+
+	public static ArrayList<Character> getLastFiveCharList(String text) {
+		ArrayList<Character> lastFiveCharList = new ArrayList<Character>();
+		for (int i = text.length() - 5; i < text.length(); i++) {
+			lastFiveCharList.add(text.charAt(i));
+		}
+
+		return lastFiveCharList;
 	}
 
 	/**
