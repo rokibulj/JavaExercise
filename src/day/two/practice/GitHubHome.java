@@ -30,7 +30,23 @@ public class GitHubHome {
 		System.out.println("Ans#18. " + getStatement(text));
 		System.out.println("Ans#19. " + getIndexSum(text));
 		System.out.println("Ans#20. " + getLastFiveCharList(text));
+		System.out.println("Ans#21. " + getFirstFiveChar(text));
 
+	}
+
+	/**
+	 * Mhd # 21. Write a method that take input one String and return a List of
+	 * first five characters. Input/Parameter :String text. Output/Return type :
+	 * ArrayList<Character> Serving Bucket : List.
+	 */
+
+	public static ArrayList<Character> getFirstFiveChar(String text) {
+		ArrayList<Character> firstFiveChar = new ArrayList<Character>();
+		for (int i = 0; i <= 4; i++) {
+			firstFiveChar.add(text.charAt(i));
+		}
+		
+		return firstFiveChar;
 	}
 
 	/**
