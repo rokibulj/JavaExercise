@@ -31,7 +31,23 @@ public class GitHubHome {
 		System.out.println("Ans#19. " + getIndexSum(text));
 		System.out.println("Ans#20. " + getLastFiveCharList(text));
 		System.out.println("Ans#21. " + getFirstFiveChar(text));
+		System.out.println("Ans#22. " + getFithToTenChar(text));
 
+	}
+
+	/**
+	 * Mhd # 22. Write a method that take one String input and return fifth to
+	 * tenth characters as a String. Input/Parameter : String text.
+	 * Output/Return type : String. Serving Bucket : Variable.
+	 */
+
+	public static String getFithToTenChar(String text) {
+		String fithToTenChar = null;
+		for (int i = 4; i <= 9; i++) {
+			fithToTenChar = fithToTenChar + String.valueOf(text.charAt(i));
+		}
+
+		return fithToTenChar;
 	}
 
 	/**
@@ -45,7 +61,7 @@ public class GitHubHome {
 		for (int i = 0; i <= 4; i++) {
 			firstFiveChar.add(text.charAt(i));
 		}
-		
+
 		return firstFiveChar;
 	}
 
