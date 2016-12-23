@@ -32,7 +32,25 @@ public class GitHubHome {
 		System.out.println("Ans#20. " + getLastFiveCharList(text));
 		System.out.println("Ans#21. " + getFirstFiveChar(text));
 		System.out.println("Ans#22. " + getFithToTenChar(text));
+		System.out.println("Ans#23. " + getAllWordList(text));
 
+	}
+
+	/**
+	 * Mhd # 23. Write a method that take one String input and return a list of
+	 * all word. Input/Parameter : String text. Output/Return type :
+	 * ArrayList<String> Serving Bucket : List
+	 */
+
+	public static ArrayList<String> getAllWordList(String text) {
+		ArrayList<String> allWordList = new ArrayList<String>();
+		String[] wordArray = text.split(" ");
+		// System.out.println(Arrays.toString(wordArray));
+		for (int i = 0; i < wordArray.length; i++) {
+			allWordList.add(wordArray[i]);
+		}
+
+		return allWordList;
 	}
 
 	/**
