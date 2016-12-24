@@ -27,7 +27,142 @@ public class GitHubHome {
 		System.out.println(("Ans#15. " + getMinNumber(numberArray)));
 		System.out.println("Ans#16. " + getString(16));
 		System.out.println("Ans#17. " + getInteger("34"));
+		System.out.println("Ans#18. " + getStatement(text));
+		System.out.println("Ans#19. " + getIndexSum(text));
+		System.out.println("Ans#20. " + getLastFiveCharList(text));
+		System.out.println("Ans#21. " + getFirstFiveChar(text));
+		System.out.println("Ans#22. " + getFithToTenChar(text));
+		System.out.println("Ans#23. " + getAllWordList(text));
+		System.out.println("Ans#24. " + getFirstWord(text));
+		System.out.println("Ans#25. " + getWordCheck(text, "we"));
 
+	}
+
+	/**
+	 * Mhd # 25. Write a method that take one String and one word input and
+	 * return true if that sentence contains given word otherwise return false
+	 * Input/Parameter : String text, String textOne Output/Return type :
+	 * boolean Serving Bucket : Variable
+	 */
+
+	public static boolean getWordCheck(String text, String word) {
+		boolean wordCheck = false;
+		String[] wordArray = text.split(" ");
+		for (int i = 0; i < wordArray.length; i++) {
+			if (wordArray[i].equalsIgnoreCase(word)) {
+				wordCheck = true;
+			}
+		}
+
+		return wordCheck;
+	}
+
+	/**
+	 * Mhd # 24. Write a method that take one String input and return first
+	 * word. Input/Parameter :String Output/Return type : String Serving Bucket
+	 * : Variable.
+	 */
+
+	public static String getFirstWord(String text) {
+		String firstWord = null;
+		String[] wordArray = text.split(" ");
+		firstWord = wordArray[0];
+
+		return firstWord;
+	}
+
+	/**
+	 * Mhd # 23. Write a method that take one String input and return a list of
+	 * all word. Input/Parameter : String text. Output/Return type :
+	 * ArrayList<String> Serving Bucket : List
+	 */
+
+	public static ArrayList<String> getAllWordList(String text) {
+		ArrayList<String> allWordList = new ArrayList<String>();
+		String[] wordArray = text.split(" ");
+		// System.out.println(Arrays.toString(wordArray));
+		for (int i = 0; i < wordArray.length; i++) {
+			allWordList.add(wordArray[i]);
+		}
+
+		return allWordList;
+	}
+
+	/**
+	 * Mhd # 22. Write a method that take one String input and return fifth to
+	 * tenth characters as a String. Input/Parameter : String text.
+	 * Output/Return type : String. Serving Bucket : Variable.
+	 */
+
+	public static String getFithToTenChar(String text) {
+		String fithToTenChar = null;
+		for (int i = 4; i <= 9; i++) {
+			fithToTenChar = fithToTenChar + String.valueOf(text.charAt(i));
+		}
+
+		return fithToTenChar;
+	}
+
+	/**
+	 * Mhd # 21. Write a method that take input one String and return a List of
+	 * first five characters. Input/Parameter :String text. Output/Return type :
+	 * ArrayList<Character> Serving Bucket : List.
+	 */
+
+	public static ArrayList<Character> getFirstFiveChar(String text) {
+		ArrayList<Character> firstFiveChar = new ArrayList<Character>();
+		for (int i = 0; i <= 4; i++) {
+			firstFiveChar.add(text.charAt(i));
+		}
+
+		return firstFiveChar;
+	}
+
+	/**
+	 * Mhd # 20. Write a method that take one String input and return a List of
+	 * last five characters. Input/Parameter :String text. Output/Return type
+	 * :ArrayList<Character> Serving Bucket : List
+	 */
+
+	public static ArrayList<Character> getLastFiveCharList(String text) {
+		ArrayList<Character> lastFiveCharList = new ArrayList<Character>();
+		for (int i = text.length() - 5; i < text.length(); i++) {
+			lastFiveCharList.add(text.charAt(i));
+		}
+
+		return lastFiveCharList;
+	}
+
+	/**
+	 * Mhd # 19. Write a method that take one String input and return the sum of
+	 * all index. Input/Parameter : String text. Output/Return type : Integer.
+	 * Serving Bucket : Variable.
+	 */
+
+	public static int getIndexSum(String text) {
+		int indexSum = 0;
+		for (int i = 0; i < text.length(); i++) {
+			indexSum = indexSum + i;
+		}
+
+		return indexSum;
+	}
+
+	/**
+	 * Mhd # 18. Write a method that take String input & return true if it
+	 * contains char 'a'. Otherwise return false; Input/Parameter : Sting text.
+	 * Output/Return type : boolean. Serving Bucket : Variable
+	 */
+
+	public static boolean getStatement(String text) {
+		boolean statement = false;
+		text = text.toLowerCase();
+		for (int i = 0; i < text.length(); i++) {
+			if (text.charAt(i) == 'a') {
+				statement = true;
+			}
+		}
+		return statement;
 	}
 
 	/**
