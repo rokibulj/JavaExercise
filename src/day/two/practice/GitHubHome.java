@@ -34,7 +34,27 @@ public class GitHubHome {
 		System.out.println("Ans#22. " + getFithToTenChar(text));
 		System.out.println("Ans#23. " + getAllWordList(text));
 		System.out.println("Ans#24. " + getFirstWord(text));
+		System.out.println("Ans#25. " + getWordCheck(text, "we"));
 
+	}
+
+	/**
+	 * Mhd # 25. Write a method that take one String and one word input and
+	 * return true if that sentence contains given word otherwise return false
+	 * Input/Parameter : String text, String textOne Output/Return type :
+	 * boolean Serving Bucket : Variable
+	 */
+
+	public static boolean getWordCheck(String text, String word) {
+		boolean wordCheck = false;
+		String[] wordArray = text.split(" ");
+		for (int i = 0; i < wordArray.length; i++) {
+			if (wordArray[i].equalsIgnoreCase(word)) {
+				wordCheck = true;
+			}
+		}
+
+		return wordCheck;
 	}
 
 	/**
