@@ -33,7 +33,22 @@ public class GitHubHome {
 		System.out.println("Ans#21. " + getFirstFiveChar(text));
 		System.out.println("Ans#22. " + getFithToTenChar(text));
 		System.out.println("Ans#23. " + getAllWordList(text));
+		System.out.println("Ans#24. " + getFirstWord(text));
 
+	}
+
+	/**
+	 * Mhd # 24. Write a method that take one String input and return first
+	 * word. Input/Parameter :String Output/Return type : String Serving Bucket
+	 * : Variable.
+	 */
+
+	public static String getFirstWord(String text) {
+		String firstWord = null;
+		String[] wordArray = text.split(" ");
+		firstWord = wordArray[0];
+
+		return firstWord;
 	}
 
 	/**
