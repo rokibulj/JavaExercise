@@ -35,7 +35,27 @@ public class GitHubHome {
 		System.out.println("Ans#23. " + getAllWordList(text));
 		System.out.println("Ans#24. " + getFirstWord(text));
 		System.out.println("Ans#25. " + getWordCheck(text, "we"));
+		System.out.println("Ans#26. " + getConsonantCount(text));
 
+	}
+
+	/**
+	 * Mhd # 26. Write a method that take String input and return the count of
+	 * all consonant. Input/Parameter : String text. Output/Return type :
+	 * Integer. Serving Bucket : Variable.
+	 */
+
+	public static int getConsonantCount(String text) {
+		int consonantCount = 0;
+		text = text.toLowerCase();
+		String allConsonant = "bcdfghjklmnpqrstvwxyz";
+		for (int i = 0; i < text.length(); i++) {
+			if (allConsonant.contains(String.valueOf(text.charAt(i)))){
+				consonantCount++;
+			}
+		}
+
+		return consonantCount;
 	}
 
 	/**
