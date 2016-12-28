@@ -36,7 +36,27 @@ public class GitHubHome {
 		System.out.println("Ans#24. " + getFirstWord(text));
 		System.out.println("Ans#25. " + getWordCheck(text, "we"));
 		System.out.println("Ans#26. " + getConsonantCount(text));
+		System.out.println("Ans#27. " + getVowelCount(text));
 
+	}
+
+	/**
+	 * Mhd # 27. Write a method that take one String input and return the count
+	 * of all vowels. Input/Parameter : String text. Output/Return type :
+	 * Integer. Serving Bucket : Variable.
+	 */
+
+	public static int getVowelCount(String text) {
+		int vowelCount = 0;
+		text = text.toLowerCase();
+		String vowel = "aeiou";
+		for (int i = 0; i < text.length(); i++) {
+			if (vowel.contains(String.valueOf(text.charAt(i)))) {
+				vowelCount++;
+			}
+		}
+
+		return vowelCount;
 	}
 
 	/**
@@ -50,7 +70,7 @@ public class GitHubHome {
 		text = text.toLowerCase();
 		String allConsonant = "bcdfghjklmnpqrstvwxyz";
 		for (int i = 0; i < text.length(); i++) {
-			if (allConsonant.contains(String.valueOf(text.charAt(i)))){
+			if (allConsonant.contains(String.valueOf(text.charAt(i)))) {
 				consonantCount++;
 			}
 		}
