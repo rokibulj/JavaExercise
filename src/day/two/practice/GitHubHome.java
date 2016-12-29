@@ -13,7 +13,7 @@ public class GitHubHome {
 		System.out.println("Ans#05. " + getSameText("This is a String"));
 		System.out.println("Ans#06. " + getLowerText("HOW ARE YOU?"));
 
-		String text = "Selenium practice at home";
+		String text = "Selenium practice at Home";
 		System.out.println("Ans#07. " + getIndexList(text));
 		System.out.println("Ans#08. " + getCharactersList(text));
 		System.out.println("Ans#09. " + getSum(20));
@@ -37,7 +37,27 @@ public class GitHubHome {
 		System.out.println("Ans#25. " + getWordCheck(text, "we"));
 		System.out.println("Ans#26. " + getConsonantCount(text));
 		System.out.println("Ans#27. " + getVowelCount(text));
+		System.out.println("Ans#28. " + getUppercaseCount(text));
 
+	}
+
+	/**
+	 * Mhd # 28. Write a method that take one String input and return the count
+	 * of all uppercase characters. Input/Parameter : String text. Output/Return
+	 * type : Intrger. Serving Bucket : Variable.
+	 */
+
+	public static int getUppercaseCount(String text) {
+		int uppercaseCount = 0;
+		String allUppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		for (int i = 0; i < text.length(); i++) {
+			String characters = String.valueOf(text.charAt(i));
+			if (allUppercase.contains(characters)) {
+				uppercaseCount++;
+			}
+		}
+
+		return uppercaseCount;
 	}
 
 	/**
