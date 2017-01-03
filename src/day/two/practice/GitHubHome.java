@@ -38,7 +38,24 @@ public class GitHubHome {
 		System.out.println("Ans#26. " + getConsonantCount(text));
 		System.out.println("Ans#27. " + getVowelCount(text));
 		System.out.println("Ans#28. " + getUppercaseCount(text));
+		System.out.println("Ans#29. " + getCharCountWithoutWhiteSpace(text));
 
+	}
+	
+	/**
+	 * Mhd # 29. Write a method that take one String input and return the count
+	 * of all characters without whitespace. Input/Parameter : String text.
+	 * Output/Return type : Integer. Serving Bucket : Variable.
+	 */
+	
+	public static int getCharCountWithoutWhiteSpace(String text){
+		int charCount = 0;
+		String newText = text.replace(" ", "");
+		for(int i = 0; i < newText.length(); i++){
+			charCount++;
+		}
+		
+		return charCount;
 	}
 
 	/**
