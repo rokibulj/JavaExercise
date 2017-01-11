@@ -39,22 +39,45 @@ public class GitHubHome {
 		System.out.println("Ans#27. " + getVowelCount(text));
 		System.out.println("Ans#28. " + getUppercaseCount(text));
 		System.out.println("Ans#29. " + getCharCountWithoutWhiteSpace(text));
+		System.out.println("Ans#30. " + getAllRepeatedChar(text));
 
 	}
-	
+
+	/**
+	 * Mhd # 30. Write a method that take one String input and return all
+	 * repeated characters. Input/Parameter : String text. Output/Return type :
+	 * String. Serving Bucket : Variable.
+	 */
+
+	public static String getAllRepeatedChar(String text) {
+		String repeatedChar = "";
+		text = text.toLowerCase();
+		for (int i = 0; i < text.length(); i++) {
+			for (int j = i + 1; j < text.length(); j++) {
+				if(text.charAt(i) == text.charAt(j)) {
+					if(!repeatedChar.contains(String.valueOf(text.charAt(i)))){
+						repeatedChar = repeatedChar + text.charAt(i);
+					}
+				}
+			}
+		}
+
+		return repeatedChar;
+	}
+
 	/**
 	 * Mhd # 29. Write a method that take one String input and return the count
 	 * of all characters without whitespace. Input/Parameter : String text.
 	 * Output/Return type : Integer. Serving Bucket : Variable.
 	 */
-	
-	public static int getCharCountWithoutWhiteSpace(String text){
+
+	public static int getCharCountWithoutWhiteSpace(String text) {
 		int charCount = 0;
 		String newText = text.replace(" ", "");
-		for(int i = 0; i < newText.length(); i++){
+		for (int i = 0; i < newText.length(); i++) {
 			charCount++;
 		}
-		
+
 		return charCount;
 	}
 
