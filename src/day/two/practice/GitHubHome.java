@@ -40,7 +40,29 @@ public class GitHubHome {
 		System.out.println("Ans#28. " + getUppercaseCount(text));
 		System.out.println("Ans#29. " + getCharCountWithoutWhiteSpace(text));
 		System.out.println("Ans#30. " + getAllRepeatedChar(text));
+		System.out.println("Ans#31. " + getUniqueChar(text));
 
+	}
+
+	/**
+	 * Mhd # 31. Write a method that take one String input & return all the
+	 * unique character. Input / Parameter : String text. Output / Return type :
+	 * String. Serving bucket : Variable.
+	 */
+
+	public static String getUniqueChar(String text) {
+		String uniqueChar = null;
+		text = text.toLowerCase();
+		uniqueChar = text;
+		for (int i = 0; i < text.length(); i++) {
+			for (int j = i + 1; j < text.length(); j++) {
+				if (text.charAt(i) == text.charAt(j)) {
+					uniqueChar = uniqueChar.replaceAll(String.valueOf(text.charAt(i)), "");
+				}
+			}
+		}
+
+		return uniqueChar;
 	}
 
 	/**
@@ -54,8 +76,8 @@ public class GitHubHome {
 		text = text.toLowerCase();
 		for (int i = 0; i < text.length(); i++) {
 			for (int j = i + 1; j < text.length(); j++) {
-				if(text.charAt(i) == text.charAt(j)) {
-					if(!repeatedChar.contains(String.valueOf(text.charAt(i)))){
+				if (text.charAt(i) == text.charAt(j)) {
+					if (!repeatedChar.contains(String.valueOf(text.charAt(i)))) {
 						repeatedChar = repeatedChar + text.charAt(i);
 					}
 				}
