@@ -7,6 +7,7 @@ public class GitHubHome {
 
 	public static void main(String[] args) {
 
+		System.out.println("Ans#01. " + getName("Hassan"));
 		System.out.println("Ans#02. " + getEvenList(21));
 		System.out.println("Ans#03. " + getOddList(18));
 		System.out.println("Ans#04. " + getKilo(10));
@@ -41,7 +42,26 @@ public class GitHubHome {
 		System.out.println("Ans#29. " + getCharCountWithoutWhiteSpace(text));
 		System.out.println("Ans#30. " + getAllRepeatedChar(text));
 		System.out.println("Ans#31. " + getUniqueChar(text));
+		System.out.println("Ans#32. " + getGivenCharCount(text, 'h'));
 
+	}
+
+	/**
+	 * Mhd # 32. Write a method that take one String and one character input and
+	 * return the count of that given character. Input / Parameter : String
+	 * text, char one. Output / Return type : Integer. Serving bucket :
+	 * Variable.
+	 */
+
+	public static int getGivenCharCount(String text, char one) {
+		int givenCharCount = 0;
+		for (int i = 0; i < text.length(); i++) {
+			if (String.valueOf(text.charAt(i)).equalsIgnoreCase(String.valueOf(one))) {
+				givenCharCount++;
+			}
+		}
+
+		return givenCharCount;
 	}
 
 	/**
@@ -385,6 +405,7 @@ public class GitHubHome {
 	 * Mhd # 11. Write a method that take one number input and return an Array
 	 * that contains 0 to given number.
 	 */
+
 	public static int[] getArray(int number) {
 		int[] newArray = new int[number + 1];
 		for (int i = 0; i <= number; i++) {
@@ -398,6 +419,7 @@ public class GitHubHome {
 	 * Mhd # 10. Write a method that take one number input and return square of
 	 * the given number.
 	 */
+
 	public static int getSquare(int number) {
 		int square = 0;
 		square = number * number;
@@ -408,6 +430,7 @@ public class GitHubHome {
 	 * Mhd # 09. Write a method that take one number input & return the sum of 1
 	 * to that given number.
 	 */
+
 	public static int getSum(int number) {
 		int sum = 0;
 		for (int i = 1; i <= number; i++) {
@@ -421,6 +444,7 @@ public class GitHubHome {
 	 * Mhd # 08. Write a method that take one String input and return a list of
 	 * all characters.
 	 */
+
 	public static ArrayList<Character> getCharactersList(String text) {
 		ArrayList<Character> charactersList = new ArrayList<Character>();
 		for (int i = 0; i < text.length(); i++) {
@@ -434,6 +458,7 @@ public class GitHubHome {
 	 * Mhd#07. Write a method that take one String input and return a list of
 	 * all index.
 	 */
+
 	public static ArrayList<Integer> getIndexList(String text) {
 		ArrayList<Integer> indexList = new ArrayList<Integer>();
 		for (int i = 0; i < text.length(); i++) {
@@ -447,6 +472,7 @@ public class GitHubHome {
 	 * Mhd#06. Write a method that take one String input and return same String
 	 * in lowerCase.
 	 */
+
 	public static String getLowerText(String text) {
 		String lowerText = "";
 		lowerText = text.toLowerCase();
@@ -457,6 +483,7 @@ public class GitHubHome {
 	 * Mhd#05. Write a method that take one String input and return same String
 	 * in upperCase.
 	 */
+
 	public static String getSameText(String text) {
 		String sameText = "";
 		sameText = text.toUpperCase();
@@ -466,6 +493,7 @@ public class GitHubHome {
 	/**
 	 * Mhd#04. Write a method that take input as mile and return as kilometer.
 	 */
+
 	public static double getKilo(int number) {
 		double kilo = 0;
 		kilo = number * 1.6;
@@ -476,6 +504,7 @@ public class GitHubHome {
 	 * Mhd#03. Write a method that take one number input and return the list of
 	 * all odd number from 0 to that given number.
 	 */
+
 	public static ArrayList<Integer> getOddList(int number) {
 		ArrayList<Integer> oddList = new ArrayList<Integer>();
 		for (int i = 0; i <= number; i++) {
@@ -491,6 +520,7 @@ public class GitHubHome {
 	 * Mhd#02. Write a method that take one number input and return the list of
 	 * all even number from 0 to that given number.
 	 */
+
 	public static ArrayList<Integer> getEvenList(int number) {
 		ArrayList<Integer> evenList = new ArrayList<Integer>();
 		for (int i = 0; i <= number; i++) {
@@ -502,4 +532,16 @@ public class GitHubHome {
 		return evenList;
 	}
 
+	/**
+	 * Mhd # 01. Write a method that take your name input and return your name.
+	 * Input/Parameter : String name. Output/Return type : String Serving Bucket
+	 * : Variable.
+	 */
+
+	public static String getName(String name) {
+		String studentName = "";
+		studentName = name;
+
+		return studentName;
+	}
 }
