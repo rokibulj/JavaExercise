@@ -45,6 +45,30 @@ public class GitHubHome {
 		System.out.println("Ans#32. " + getGivenCharCount(text, 'h'));
 		System.out.println("Ans#33. " + getSumOfAllArrayElement(numberArray));
 
+		ArrayList<Integer> numberList = new ArrayList<Integer>();
+		numberList.add(11);
+		numberList.add(15);
+		numberList.add(14);
+		numberList.add(17);
+		numberList.add(18);
+		numberList.add(13);
+		System.out.println("Ans#34. " + getSumOfAllListElement(numberList));
+
+	}
+
+	/**
+	 * Mhd # 34. Write a method that take one Integer type List input and return
+	 * sum of all values. Input / Parameter : ArrayList<Integer> numList. Output
+	 * Return type : Integer. Serving bucket : Variable.
+	 */
+
+	public static int getSumOfAllListElement(ArrayList<Integer> numberList) {
+		int sumOfAllListElement = 0;
+		for (int i = 0; i < numberList.size(); i++) {
+			sumOfAllListElement = sumOfAllListElement + numberList.get(i);
+		}
+
+		return sumOfAllListElement;
 	}
 
 	/**
