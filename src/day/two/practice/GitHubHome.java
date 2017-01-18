@@ -43,7 +43,23 @@ public class GitHubHome {
 		System.out.println("Ans#30. " + getAllRepeatedChar(text));
 		System.out.println("Ans#31. " + getUniqueChar(text));
 		System.out.println("Ans#32. " + getGivenCharCount(text, 'h'));
+		System.out.println("Ans#33. " + getSumOfAllArrayElement(numberArray));
 
+	}
+
+	/**
+	 * Mhd # 33. Write a method that take one Integer type Array input and
+	 * return sum of all values. Input / Parameter : int[] numberArray. Output /
+	 * Return type : Integer. Serving bucket : Variable.
+	 */
+
+	public static int getSumOfAllArrayElement(int[] numberArray) {
+		int sumOfAllArrayElement = 0;
+		for (int i = 0; i < numberArray.length; i++) {
+			sumOfAllArrayElement = sumOfAllArrayElement + numberArray[i];
+		}
+
+		return sumOfAllArrayElement;
 	}
 
 	/**
