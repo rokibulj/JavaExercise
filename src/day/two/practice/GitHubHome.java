@@ -53,7 +53,23 @@ public class GitHubHome {
 		numberList.add(18);
 		numberList.add(13);
 		System.out.println("Ans#34. " + getSumOfAllListElement(numberList));
+		System.out.println("Ans#35. " + getReverseString(text));
 
+	}
+
+	/**
+	 * Mhd # 35. Write a method that take one String input and return same
+	 * String in reverse order. Input / Parameter : String text. Output / Return
+	 * type : String. Serving bucket : Variable.
+	 */
+
+	public static String getReverseString(String text) {
+		String reverseString = "";
+		for (int i = 0; i < text.length(); i++) {
+			reverseString = text.charAt(i) + reverseString;
+		}
+
+		return reverseString;
 	}
 
 	/**
