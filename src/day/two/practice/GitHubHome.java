@@ -55,7 +55,23 @@ public class GitHubHome {
 		System.out.println("Ans#34. " + getSumOfAllListElement(numberList));
 		System.out.println("Ans#35. " + getReverseString(text));
 		System.out.println("Ans#36. " + Arrays.toString(getArrayReturn(numberList)));
+		System.out.println("Ans#37. " + getConvertList(numberArray));
 
+	}
+
+	/**
+	 * Mhd # 37. Write a method that take one number Array input than convert to
+	 * a list and return list. Input / Parameter : int[] numberArray. Output /
+	 * Return type : ArrayList<Integer> Serving bucket : List.
+	 */
+
+	public static ArrayList<Integer> getConvertList(int[] numberArray) {
+		ArrayList<Integer> convertList = new ArrayList<Integer>();
+		for (int i = 0; i < numberArray.length; i++) {
+			convertList.add(numberArray[i]);
+		}
+
+		return convertList;
 	}
 
 	/**
