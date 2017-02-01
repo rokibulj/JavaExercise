@@ -58,7 +58,30 @@ public class GitHubHome {
 		System.out.println("Ans#36. " + Arrays.toString(getArrayReturn(numberList)));
 		System.out.println("Ans#37. " + getConvertList(numberArray));
 		System.out.println("Ans#38. " + Arrays.toString(getSortedArray(numberArray)));
+		System.out.println("Ans#40. " + Arrays.toString(getBubbleSortedArray(numberArray)));
 
+	}
+
+	/**
+	 * Mhd # 40. Write a method that take one number Array input and return the
+	 * Bubble sorted Array. Input/Parameter : int[] numberArray. Output/Return
+	 * type : int[]. Serving bucket : Array.
+	 */
+
+	public static int[] getBubbleSortedArray(int[] numberArray) {
+		int[] bubbleSortedArray = new int[numberArray.length];
+		for (int i = 0; i < numberArray.length; i++) {
+			for (int j = i + 1; j < numberArray.length; j++) {
+				if (numberArray[i] > numberArray[j]) {
+					int number = numberArray[i];
+					numberArray[i] = numberArray[j];
+					numberArray[j] = number;
+				}
+			}
+		}
+		bubbleSortedArray = numberArray;
+
+		return bubbleSortedArray;
 	}
 
 	/**
