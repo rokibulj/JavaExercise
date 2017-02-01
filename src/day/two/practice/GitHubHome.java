@@ -1,5 +1,6 @@
 package day.two.practice;
 
+import java.awt.image.AreaAveragingScaleFilter;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -56,7 +57,22 @@ public class GitHubHome {
 		System.out.println("Ans#35. " + getReverseString(text));
 		System.out.println("Ans#36. " + Arrays.toString(getArrayReturn(numberList)));
 		System.out.println("Ans#37. " + getConvertList(numberArray));
+		System.out.println("Ans#38. " + Arrays.toString(getSortedArray(numberArray)));
 
+	}
+
+	/**
+	 * Mhd # 38. Write a method that take one number array input and return the
+	 * sorted array. Input / Parameter : int[] numberArray. Output / Return type
+	 * : int[]. Serving bucket : Array.
+	 */
+
+	public static int[] getSortedArray(int[] numberArray) {
+		int[] sortedArray = new int[numberArray.length];
+		Arrays.sort(numberArray);
+		sortedArray = numberArray;
+
+		return sortedArray;
 	}
 
 	/**
