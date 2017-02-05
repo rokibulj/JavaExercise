@@ -26,5 +26,5 @@ Q-08. Write a method that take one String input and return a list of
 Q-09. Write a method that take one number input & return the sum of 1
 	  to that given number.	  	   
 	  
-Q-10. Write a method that take one number input and return square of
+[Q-10.](https://github.com/rokibulj/JavaExercise/blob/feature/java-method-practice/src/day/two/practice/GitHubHome.java#L547) Write a method that take one number input and return square of
 	  the given number.	  
