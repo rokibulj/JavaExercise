@@ -66,6 +66,27 @@ public class GitHubHome {
 		String textTwo = "I was born in 1986 now 2017 so I'm 31 years old.";
 		System.out.println("Ans#42. " + getAllNumberList(textTwo));
 
+		String email = "This is my email joni_0023@yahoo.com";
+		System.out.println("Ans#43. " + getEmailAddress(email));
+
+	}
+
+	/**
+	 * Mhd # 43. Write a method that take one String input which contain an
+	 * email address than collect and return that email. Input : String textTwo.
+	 * Output : String Serving bucket : Variable.
+	 */
+
+	public static String getEmailAddress(String email) {
+		String emailAddress = "";
+		String[] wordArray = email.split(" ");
+		for (int i = 0; i < wordArray.length; i++) {
+			if (wordArray[i].matches("[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+")) {
+				emailAddress = wordArray[i];
+			}
+		}
+
+		return emailAddress;
 	}
 
 	/**
