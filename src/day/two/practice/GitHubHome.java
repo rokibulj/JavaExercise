@@ -60,6 +60,48 @@ public class GitHubHome {
 		System.out.println("Ans#38. " + Arrays.toString(getSortedArray(numberArray)));
 		System.out.println("Ans#40. " + Arrays.toString(getBubbleSortedArray(numberArray)));
 
+		String textOne = "I am 20 years old";
+		System.out.println("Ans#41. " + getAsInteger(textOne));
+
+		String textTwo = "I was born in 1986 now 2017 so I'm 31 years old.";
+		System.out.println("Ans#42. " + getAllNumberList(textTwo));
+
+	}
+
+	/**
+	 * Mhd # 42. Wrtite a method that take one String input which contain some
+	 * numbers than collect all of those number and return in a List. Input :
+	 * String textOther. Output : ArrayList<Integer>. Serving bucket : List.
+	 */
+
+	public static ArrayList<Integer> getAllNumberList(String textTwo) {
+		ArrayList<Integer> allNumberList = new ArrayList<Integer>();
+		String[] wordArray = textTwo.split(" ");
+		for (int i = 0; i < wordArray.length; i++) {
+			if (wordArray[i].matches("[0-9]+")) {
+				allNumberList.add(Integer.valueOf(wordArray[i]));
+			}
+		}
+
+		return allNumberList;
+	}
+
+	/**
+	 * Mhd # 41. Wrtite a method that take this ' I am 20 years old' String
+	 * input and return 20 as integer. Input : String newText. Output : Integer.
+	 * Serving bucket : Variable.
+	 */
+
+	public static int getAsInteger(String textOne) {
+		int asInteger = 0;
+		String[] wordArray = textOne.split(" ");
+		for (int i = 0; i < wordArray.length; i++) {
+			if (wordArray[i].matches("[0-9]+")) {
+				asInteger = Integer.valueOf(wordArray[i]);
+			}
+		}
+
+		return asInteger;
 	}
 
 	/**
