@@ -68,7 +68,48 @@ public class GitHubHome {
 
 		String email = "This is my email joni_0023@yahoo.com";
 		System.out.println("Ans#43. " + getEmailAddress(email));
+		System.out.println("Ans#44. " + getAlternativeChar(text));
+		System.out.println("Ans#45. " + getAlterCharUppercase(text));
 
+	}
+
+	/**
+	 * Mhd # 45. Write a method that take one string input and return the same
+	 * string by making uppercase of all alternative characters and rest of the
+	 * characters in lowercase. Input : String text. Output : String. Serving
+	 * Bucket : Variable.
+	 */
+
+	public static String getAlterCharUppercase(String text) {
+		String alterCharUppercase = "";
+		text = text.replaceAll(" ", "");
+		for (int i = 0; i < text.length(); i++) {
+			if (i % 2 == 2) {
+				alterCharUppercase = alterCharUppercase + Character.toUpperCase(text.charAt(i));
+			} else {
+				alterCharUppercase = alterCharUppercase + Character.toLowerCase(text.charAt(i));
+			}
+		}
+
+		return alterCharUppercase;
+	}
+
+	/**
+	 * Mhd # 44. Write a method that take one string input and return all
+	 * alternative characters without whitespace. Input : String text. Output :
+	 * String. Serving Bucket : Variable.
+	 */
+
+	public static String getAlternativeChar(String text) {
+		String alternativeChar = "";
+		text = text.replaceAll(" ", "");
+		for (int i = 0; i < text.length(); i++) {
+			if (i % 2 == 0) {
+				alternativeChar = alternativeChar + text.charAt(i);
+			}
+		}
+
+		return alternativeChar;
 	}
 
 	/**
