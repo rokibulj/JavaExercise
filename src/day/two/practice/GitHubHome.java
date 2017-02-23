@@ -1,5 +1,6 @@
 package day.two.practice;
 
+import java.awt.image.AreaAveragingScaleFilter;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -7,13 +8,14 @@ public class GitHubHome {
 
 	public static void main(String[] args) {
 
+		System.out.println("Ans#01. " + getName("Hassan"));
 		System.out.println("Ans#02. " + getEvenList(21));
 		System.out.println("Ans#03. " + getOddList(18));
 		System.out.println("Ans#04. " + getKilo(10));
 		System.out.println("Ans#05. " + getSameText("This is a String"));
 		System.out.println("Ans#06. " + getLowerText("HOW ARE YOU?"));
 
-		String text = "Selenium practice at home";
+		String text = "Selenium practice at Home";
 		System.out.println("Ans#07. " + getIndexList(text));
 		System.out.println("Ans#08. " + getCharactersList(text));
 		System.out.println("Ans#09. " + getSum(20));
@@ -35,7 +37,379 @@ public class GitHubHome {
 		System.out.println("Ans#23. " + getAllWordList(text));
 		System.out.println("Ans#24. " + getFirstWord(text));
 		System.out.println("Ans#25. " + getWordCheck(text, "we"));
+		System.out.println("Ans#26. " + getConsonantCount(text));
+		System.out.println("Ans#27. " + getVowelCount(text));
+		System.out.println("Ans#28. " + getUppercaseCount(text));
+		System.out.println("Ans#29. " + getCharCountWithoutWhiteSpace(text));
+		System.out.println("Ans#30. " + getAllRepeatedChar(text));
+		System.out.println("Ans#31. " + getUniqueChar(text));
+		System.out.println("Ans#32. " + getGivenCharCount(text, 'h'));
+		System.out.println("Ans#33. " + getSumOfAllArrayElement(numberArray));
 
+		ArrayList<Integer> numberList = new ArrayList<Integer>();
+		numberList.add(11);
+		numberList.add(15);
+		numberList.add(14);
+		numberList.add(17);
+		numberList.add(18);
+		numberList.add(13);
+		System.out.println("Ans#34. " + getSumOfAllListElement(numberList));
+		System.out.println("Ans#35. " + getReverseString(text));
+		System.out.println("Ans#36. " + Arrays.toString(getArrayReturn(numberList)));
+		System.out.println("Ans#37. " + getConvertList(numberArray));
+		System.out.println("Ans#38. " + Arrays.toString(getSortedArray(numberArray)));
+		System.out.println("Ans#40. " + Arrays.toString(getBubbleSortedArray(numberArray)));
+
+		String textOne = "I am 20 years old";
+		System.out.println("Ans#41. " + getAsInteger(textOne));
+
+		String textTwo = "I was born in 1986 now 2017 so I'm 31 years old.";
+		System.out.println("Ans#42. " + getAllNumberList(textTwo));
+
+		String email = "This is my email joni_0023@yahoo.com";
+		System.out.println("Ans#43. " + getEmailAddress(email));
+		System.out.println("Ans#44. " + getAlternativeChar(text));
+		System.out.println("Ans#45. " + getAlterCharUppercase(text));
+
+	}
+
+	/**
+	 * Mhd # 45. Write a method that take one string input and return the same
+	 * string by making uppercase of all alternative characters and rest of the
+	 * characters in lowercase. Input : String text. Output : String. Serving
+	 * Bucket : Variable.
+	 */
+
+	public static String getAlterCharUppercase(String text) {
+		String alterCharUppercase = "";
+		text = text.replaceAll(" ", "");
+		for (int i = 0; i < text.length(); i++) {
+			if (i % 2 == 2) {
+				alterCharUppercase = alterCharUppercase + Character.toUpperCase(text.charAt(i));
+			} else {
+				alterCharUppercase = alterCharUppercase + Character.toLowerCase(text.charAt(i));
+			}
+		}
+
+		return alterCharUppercase;
+	}
+
+	/**
+	 * Mhd # 44. Write a method that take one string input and return all
+	 * alternative characters without whitespace. Input : String text. Output :
+	 * String. Serving Bucket : Variable.
+	 */
+
+	public static String getAlternativeChar(String text) {
+		String alternativeChar = "";
+		text = text.replaceAll(" ", "");
+		for (int i = 0; i < text.length(); i++) {
+			if (i % 2 == 0) {
+				alternativeChar = alternativeChar + text.charAt(i);
+			}
+		}
+
+		return alternativeChar;
+	}
+
+	/**
+	 * Mhd # 43. Write a method that take one String input which contain an
+	 * email address than collect and return that email. Input : String textTwo.
+	 * Output : String Serving bucket : Variable.
+	 */
+
+	public static String getEmailAddress(String email) {
+		String emailAddress = "";
+		String[] wordArray = email.split(" ");
+		for (int i = 0; i < wordArray.length; i++) {
+			if (wordArray[i].matches("[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+")) {
+				emailAddress = wordArray[i];
+			}
+		}
+
+		return emailAddress;
+	}
+
+	/**
+	 * Mhd # 42. Wrtite a method that take one String input which contain some
+	 * numbers than collect all of those number and return in a List. Input :
+	 * String textOther. Output : ArrayList<Integer>. Serving bucket : List.
+	 */
+
+	public static ArrayList<Integer> getAllNumberList(String textTwo) {
+		ArrayList<Integer> allNumberList = new ArrayList<Integer>();
+		String[] wordArray = textTwo.split(" ");
+		for (int i = 0; i < wordArray.length; i++) {
+			if (wordArray[i].matches("[0-9]+")) {
+				allNumberList.add(Integer.valueOf(wordArray[i]));
+			}
+		}
+
+		return allNumberList;
+	}
+
+	/**
+	 * Mhd # 41. Wrtite a method that take this ' I am 20 years old' String
+	 * input and return 20 as integer. Input : String newText. Output : Integer.
+	 * Serving bucket : Variable.
+	 */
+
+	public static int getAsInteger(String textOne) {
+		int asInteger = 0;
+		String[] wordArray = textOne.split(" ");
+		for (int i = 0; i < wordArray.length; i++) {
+			if (wordArray[i].matches("[0-9]+")) {
+				asInteger = Integer.valueOf(wordArray[i]);
+			}
+		}
+
+		return asInteger;
+	}
+
+	/**
+	 * Mhd # 40. Write a method that take one number Array input and return the
+	 * Bubble sorted Array. Input/Parameter : int[] numberArray. Output/Return
+	 * type : int[]. Serving bucket : Array.
+	 */
+
+	public static int[] getBubbleSortedArray(int[] numberArray) {
+		int[] bubbleSortedArray = new int[numberArray.length];
+		for (int i = 0; i < numberArray.length; i++) {
+			for (int j = i + 1; j < numberArray.length; j++) {
+				if (numberArray[i] > numberArray[j]) {
+					int number = numberArray[i];
+					numberArray[i] = numberArray[j];
+					numberArray[j] = number;
+				}
+			}
+		}
+		bubbleSortedArray = numberArray;
+
+		return bubbleSortedArray;
+	}
+
+	/**
+	 * Mhd # 38. Write a method that take one number array input and return the
+	 * sorted array. Input / Parameter : int[] numberArray. Output / Return type
+	 * : int[]. Serving bucket : Array.
+	 */
+
+	public static int[] getSortedArray(int[] numberArray) {
+		int[] sortedArray = new int[numberArray.length];
+		Arrays.sort(numberArray);
+		sortedArray = numberArray;
+
+		return sortedArray;
+	}
+
+	/**
+	 * Mhd # 37. Write a method that take one number Array input than convert to
+	 * a list and return list. Input / Parameter : int[] numberArray. Output /
+	 * Return type : ArrayList<Integer> Serving bucket : List.
+	 */
+
+	public static ArrayList<Integer> getConvertList(int[] numberArray) {
+		ArrayList<Integer> convertList = new ArrayList<Integer>();
+		for (int i = 0; i < numberArray.length; i++) {
+			convertList.add(numberArray[i]);
+		}
+
+		return convertList;
+	}
+
+	/**
+	 * Mhd # 36. Write a method that take one number List input than convert
+	 * that to an Array and return that Array. Input / Parameter :
+	 * ArrayList<Integer> numList. Output / Return type : int[] Serving Bucket :
+	 * Array.
+	 */
+
+	public static int[] getArrayReturn(ArrayList<Integer> numberList) {
+		int[] arrayReturn = new int[numberList.size()];
+		for (int i = 0; i < numberList.size(); i++) {
+			arrayReturn[i] = numberList.get(i);
+		}
+
+		return arrayReturn;
+	}
+
+	/**
+	 * Mhd # 35. Write a method that take one String input and return same
+	 * String in reverse order. Input / Parameter : String text. Output / Return
+	 * type : String. Serving bucket : Variable.
+	 */
+
+	public static String getReverseString(String text) {
+		String reverseString = "";
+		for (int i = 0; i < text.length(); i++) {
+			reverseString = text.charAt(i) + reverseString;
+		}
+
+		return reverseString;
+	}
+
+	/**
+	 * Mhd # 34. Write a method that take one Integer type List input and return
+	 * sum of all values. Input / Parameter : ArrayList<Integer> numList. Output
+	 * Return type : Integer. Serving bucket : Variable.
+	 */
+
+	public static int getSumOfAllListElement(ArrayList<Integer> numberList) {
+		int sumOfAllListElement = 0;
+		for (int i = 0; i < numberList.size(); i++) {
+			sumOfAllListElement = sumOfAllListElement + numberList.get(i);
+		}
+
+		return sumOfAllListElement;
+	}
+
+	/**
+	 * Mhd # 33. Write a method that take one Integer type Array input and
+	 * return sum of all values. Input / Parameter : int[] numberArray. Output /
+	 * Return type : Integer. Serving bucket : Variable.
+	 */
+
+	public static int getSumOfAllArrayElement(int[] numberArray) {
+		int sumOfAllArrayElement = 0;
+		for (int i = 0; i < numberArray.length; i++) {
+			sumOfAllArrayElement = sumOfAllArrayElement + numberArray[i];
+		}
+
+		return sumOfAllArrayElement;
+	}
+
+	/**
+	 * Mhd # 32. Write a method that take one String and one character input and
+	 * return the count of that given character. Input / Parameter : String
+	 * text, char one. Output / Return type : Integer. Serving bucket :
+	 * Variable.
+	 */
+
+	public static int getGivenCharCount(String text, char one) {
+		int givenCharCount = 0;
+		for (int i = 0; i < text.length(); i++) {
+			if (String.valueOf(text.charAt(i)).equalsIgnoreCase(String.valueOf(one))) {
+				givenCharCount++;
+			}
+		}
+
+		return givenCharCount;
+	}
+
+	/**
+	 * Mhd # 31. Write a method that take one String input & return all the
+	 * unique character. Input / Parameter : String text. Output / Return type :
+	 * String. Serving bucket : Variable.
+	 */
+
+	public static String getUniqueChar(String text) {
+		String uniqueChar = null;
+		text = text.toLowerCase();
+		uniqueChar = text;
+		for (int i = 0; i < text.length(); i++) {
+			for (int j = i + 1; j < text.length(); j++) {
+				if (text.charAt(i) == text.charAt(j)) {
+					uniqueChar = uniqueChar.replaceAll(String.valueOf(text.charAt(i)), "");
+				}
+			}
+		}
+
+		return uniqueChar;
+	}
+
+	/**
+	 * Mhd # 30. Write a method that take one String input and return all
+	 * repeated characters. Input/Parameter : String text. Output/Return type :
+	 * String. Serving Bucket : Variable.
+	 */
+
+	public static String getAllRepeatedChar(String text) {
+		String repeatedChar = "";
+		text = text.toLowerCase();
+		for (int i = 0; i < text.length(); i++) {
+			for (int j = i + 1; j < text.length(); j++) {
+				if (text.charAt(i) == text.charAt(j)) {
+					if (!repeatedChar.contains(String.valueOf(text.charAt(i)))) {
+						repeatedChar = repeatedChar + text.charAt(i);
+					}
+				}
+			}
+		}
+
+		return repeatedChar;
+	}
+
+	/**
+	 * Mhd # 29. Write a method that take one String input and return the count
+	 * of all characters without whitespace. Input/Parameter : String text.
+	 * Output/Return type : Integer. Serving Bucket : Variable.
+	 */
+
+	public static int getCharCountWithoutWhiteSpace(String text) {
+		int charCount = 0;
+		String newText = text.replace(" ", "");
+		for (int i = 0; i < newText.length(); i++) {
+			charCount++;
+		}
+
+		return charCount;
+	}
+
+	/**
+	 * Mhd # 28. Write a method that take one String input and return the count
+	 * of all uppercase characters. Input/Parameter : String text. Output/Return
+	 * type : Intrger. Serving Bucket : Variable.
+	 */
+
+	public static int getUppercaseCount(String text) {
+		int uppercaseCount = 0;
+		String allUppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		for (int i = 0; i < text.length(); i++) {
+			String characters = String.valueOf(text.charAt(i));
+			if (allUppercase.contains(characters)) {
+				uppercaseCount++;
+			}
+		}
+
+		return uppercaseCount;
+	}
+
+	/**
+	 * Mhd # 27. Write a method that take one String input and return the count
+	 * of all vowels. Input/Parameter : String text. Output/Return type :
+	 * Integer. Serving Bucket : Variable.
+	 */
+
+	public static int getVowelCount(String text) {
+		int vowelCount = 0;
+		text = text.toLowerCase();
+		String vowel = "aeiou";
+		for (int i = 0; i < text.length(); i++) {
+			if (vowel.contains(String.valueOf(text.charAt(i)))) {
+				vowelCount++;
+			}
+		}
+
+		return vowelCount;
+	}
+
+	/**
+	 * Mhd # 26. Write a method that take String input and return the count of
+	 * all consonant. Input/Parameter : String text. Output/Return type :
+	 * Integer. Serving Bucket : Variable.
+	 */
+
+	public static int getConsonantCount(String text) {
+		int consonantCount = 0;
+		text = text.toLowerCase();
+		String allConsonant = "bcdfghjklmnpqrstvwxyz";
+		for (int i = 0; i < text.length(); i++) {
+			if (allConsonant.contains(String.valueOf(text.charAt(i)))) {
+				consonantCount++;
+			}
+		}
+
+		return consonantCount;
 	}
 
 	/**
@@ -263,6 +637,7 @@ public class GitHubHome {
 	 * Mhd # 11. Write a method that take one number input and return an Array
 	 * that contains 0 to given number.
 	 */
+
 	public static int[] getArray(int number) {
 		int[] newArray = new int[number + 1];
 		for (int i = 0; i <= number; i++) {
@@ -276,6 +651,7 @@ public class GitHubHome {
 	 * Mhd # 10. Write a method that take one number input and return square of
 	 * the given number.
 	 */
+
 	public static int getSquare(int number) {
 		int square = 0;
 		square = number * number;
@@ -286,6 +662,7 @@ public class GitHubHome {
 	 * Mhd # 09. Write a method that take one number input & return the sum of 1
 	 * to that given number.
 	 */
+
 	public static int getSum(int number) {
 		int sum = 0;
 		for (int i = 1; i <= number; i++) {
@@ -299,6 +676,7 @@ public class GitHubHome {
 	 * Mhd # 08. Write a method that take one String input and return a list of
 	 * all characters.
 	 */
+
 	public static ArrayList<Character> getCharactersList(String text) {
 		ArrayList<Character> charactersList = new ArrayList<Character>();
 		for (int i = 0; i < text.length(); i++) {
@@ -312,6 +690,7 @@ public class GitHubHome {
 	 * Mhd#07. Write a method that take one String input and return a list of
 	 * all index.
 	 */
+
 	public static ArrayList<Integer> getIndexList(String text) {
 		ArrayList<Integer> indexList = new ArrayList<Integer>();
 		for (int i = 0; i < text.length(); i++) {
@@ -325,6 +704,7 @@ public class GitHubHome {
 	 * Mhd#06. Write a method that take one String input and return same String
 	 * in lowerCase.
 	 */
+
 	public static String getLowerText(String text) {
 		String lowerText = "";
 		lowerText = text.toLowerCase();
@@ -335,6 +715,7 @@ public class GitHubHome {
 	 * Mhd#05. Write a method that take one String input and return same String
 	 * in upperCase.
 	 */
+
 	public static String getSameText(String text) {
 		String sameText = "";
 		sameText = text.toUpperCase();
@@ -344,6 +725,7 @@ public class GitHubHome {
 	/**
 	 * Mhd#04. Write a method that take input as mile and return as kilometer.
 	 */
+
 	public static double getKilo(int number) {
 		double kilo = 0;
 		kilo = number * 1.6;
@@ -351,9 +733,26 @@ public class GitHubHome {
 	}
 
 	/**
+	 * Mhd#03. Write a method that take one number input and return the list of
+	 * all odd number from 0 to that given number.
+	 */
+
+	public static ArrayList<Integer> getOddList(int number) {
+		ArrayList<Integer> oddList = new ArrayList<Integer>();
+		for (int i = 0; i <= number; i++) {
+			if (i % 2 == 1) {
+				oddList.add(i);
+			}
+		}
+
+		return oddList;
+	}
+
+	/**
 	 * Mhd#02. Write a method that take one number input and return the list of
 	 * all even number from 0 to that given number.
 	 */
+
 	public static ArrayList<Integer> getEvenList(int number) {
 		ArrayList<Integer> evenList = new ArrayList<Integer>();
 		for (int i = 0; i <= number; i++) {
@@ -366,18 +765,15 @@ public class GitHubHome {
 	}
 
 	/**
-	 * Mhd#03. Write a method that take one number input and return the list of
-	 * all odd number from 0 to that given number.
+	 * Mhd # 01. Write a method that take your name input and return your name.
+	 * Input/Parameter : String name. Output/Return type : String Serving Bucket
+	 * : Variable.
 	 */
-	public static ArrayList<Integer> getOddList(int number) {
-		ArrayList<Integer> oddList = new ArrayList<Integer>();
-		for (int i = 0; i <= number; i++) {
-			if (i % 2 == 1) {
-				oddList.add(i);
-			}
-		}
 
-		return oddList;
+	public static String getName(String name) {
+		String studentName = "";
+		studentName = name;
+
+		return studentName;
 	}
-
 }
